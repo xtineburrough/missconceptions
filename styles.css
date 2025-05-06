@@ -1,0 +1,456 @@
+@charset "UTF-8";
+* {
+	padding: 0; margin: 0;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+background: url(images/walk-on-wire-x.jpg) center top repeat-y scroll;
+	/*background: url(images/background-body.gif) center top repeat-y scroll; */
+	background-size: cover;
+}
+.active-x {
+	background:  url(images/background-header.gif) center top no-repeat fixed;
+	background-size: cover;
+}
+.clear {
+	clear: both;
+}
+nav {
+	background:#000 url(images/nav-top-for-000bg.png) center top no-repeat fixed;
+	position: fixed;
+	top: 0;
+	padding: 1.25em 0 0 0;
+	height: 115px;
+	width: 100%;
+	/*height: 215px;*/
+	z-index: 4;
+}
+nav ul {padding: 1em .5em .5em 1em;}
+nav li {display: inline;}
+nav li a {
+	font-weight: 700;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 1.25em;
+	color: rgba(250,124,0,1.00); /*orange */
+	text-decoration: none;
+	margin: 0 -2px 0 4px;
+}
+nav li a:hover {
+	color: deeppink;
+}
+.video {
+	padding: 0 0 8px 0;
+	text-align: center;
+	margin: 115px 0 0 0;
+	background-color: #000;
+}
+.instagram {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	background-size: cover;
+	background-color: rgb(0,0,0,.8);
+}
+
+.handwriting {
+	font-family: 'Damion', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	/*font-family: 'Niconne', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; */
+	color: #e0e0e0;
+}
+.x {
+	text-align: center;
+	padding: 1em;
+	font-size: 4em;
+	color: green;
+	opacity: .8;
+ 	text-shadow: 3px 2px 6px deeppink;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	/*background: rgba(129,153,204, .4) url(images/beneath-the-wire-for-top.png) center top no-repeat scroll; */
+	z-index: 2;
+}
+ .x p {
+  -webkit-transform: rotate(-1deg);
+-moz-transform: rotate(-1deg);
+-o-transform: rotate(-1deg);
+-ms-transform: rotate(-1deg);
+transform: rotate(-1deg);
+display: inline-block;
+	 background-color: rgba(213,211,211,.2);
+}
+
+.bio-rss {
+	width: 100%;
+	width: 100vw;
+	margin-top: -12px;
+	padding-top: 6px;
+}
+.short-bio {
+	padding: 1% 2.25% 3% 2.25%;
+	color:#373636;
+	font-size: 1em;
+	font-family: 'Arvo', sans-serif;
+	float: left;
+	width: 15%;
+	background-color: rgb(150,146,146);
+		height: 180px;
+	overflow: scroll;
+}
+.on-campus {
+	float: left;
+	padding: 1% 2.25% 3% 2.25%;
+	width: 25%;
+	background-color: rgb(50,85,7); /*dark green */
+	font-size: 1em;
+	font-family: 'Arvo', sans-serif;
+	color: #e0e0e0;
+		height: 180px;
+	overflow: scroll;
+}
+.labsynthe {
+	float: left;
+	padding: 1% 2.25% 3% 2.25%;
+	width: 20%;
+	background-color: rgba(250,124,0,.95); /*orange */
+	font-size: 1em;
+	font-family: 'Arvo', sans-serif;
+	color: #373636;
+		height: 180px;
+	overflow: scroll;
+}
+.left {
+	float: left;
+}
+
+.left a{
+	font-size: .75em;
+	display: block;
+	line-height: .75em;
+}
+.rss {
+	text-align: center;
+	width: 51%; 
+	position: absolute;
+	margin: 0 0 0 49%;
+	background-color: #e0e0e0;
+	height: 400px;
+	padding: 0 1em 0 0;
+	z-index: -1;
+}
+
+.projects {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	margin: 12px 0 0 12px;
+}
+.exhibits {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	margin: 3em 0 0 0;
+}
+.biography {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	margin: 125px 0 0 0;
+}
+.bio-bg {
+	background-color: #fff;
+	padding: 1em;
+	max-width: 600px;
+	float: left;
+}
+.bio-right-side {
+	background-color: rgba(180,180,180,.9);
+	float: left;
+	min-width: 300px;
+	font-family: 'Oswald', sans-serif;
+	color: rgba(37,44,93,1.00);
+}
+.wrap {
+clear: both;
+	overflow: visible;
+	width: 100%;
+	font-family: 'Oswald', sans-serif;
+	text-align: left;
+	font-size: 1em;
+	background-color: rgba(250,124,0,.95); /*orange */
+	color: black;
+	z-index: 5;
+}
+.wrap p {
+	padding: .5em;
+}
+.wrap a {
+	font-family: 'Oswald', sans-serif;
+	color: rgba(37,36,36,1.00);
+	margin: 0 -.5em;
+}
+.wrap a:hover {
+	color: rgba(36,70,113,1.00);
+}
+.box {
+   float: left;
+   position: relative;
+   width: 240px;
+
+}
+.boxInner {
+   position: absolute;
+   left: 10px;
+   right: 10px;
+   top: 10px;
+   bottom: 10px;
+   overflow: visible;
+}
+
+.boxInner img {
+   width: 100%;
+}
+
+.titleBox {
+  position: relative;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: rgba(0, 0, 0, 0.5);
+   color: #e0e0e0;
+   padding: 4px 1% 8px 1%;
+   text-align: center;
+	overflow: visible;
+	width: 248px;
+}
+
+.titleBox a {
+	color: #e0e0e0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+.titleBox a:hover {
+	color: cornsilk;
+}
+
+.boxInner a {
+	padding: 0;
+}
+body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+   margin-bottom: 0;
+}
+
+.bio h1 {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+}
+.bio-left {
+	width: 45%;
+	padding: 1em;
+	float: left;
+}
+.bio-right {
+	width: 45%;
+	padding: 1em 1em 1em 0;
+	float: left;
+}
+.bio a {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1em;
+	color: #1B5975;
+	padding: 0;
+}
+.bio a:hover {
+	color: #482E00;
+}
+h2 {
+	background-color: rgba(36,70,113,1.00);
+	padding: .75em;
+	font-size: .85em;
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	color: deeppink;
+	text-align: center;
+	margin: 0;
+}
+
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { 
+	position: relative; 
+	top: 0; right: 0; width: 100%; 
+	background: rgba(0,0,0,0.5); 
+	color: #fff; 
+	padding-top: 240px; 
+
+}
+
+.vid-info h1 { 
+	font-size: 1em; 
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	line-height: 1.2; 
+}
+
+
+/* /// start styles for exhibition page & slider /// */
+
+#container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	min-height: 600px;
+}
+.slider {
+width: 100%;
+overflow: hidden;
+height: 600px;
+position: relative;
+	top: 115px;
+}
+
+.slider ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	width: 500%; /* SET the width to 100*number of slides % so 400% for four slides, then set percentage width in slider li to reduce */
+	height: 100%;
+	top: 0;
+}
+
+.slider li {
+	padding: 0;
+	margin: 0;
+	width: 20%; /* the width here is 100/number of images% so in this case 100/4 or 25% this reduces what was set longer in slider ul */
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	}
+.slider li img {
+	border: none;
+	width: 100%;
+	min-height: 100%;
+}
+
+.slider button {
+position: absolute;
+display: block;
+box-sizing: border-box;
+border: none;
+outline: none;
+top: 0;
+bottom: 0;
+width: 20%;
+background-color: rgba(0, 0, 0, 0.3);
+color: #fff;
+margin: 0;
+padding: 0;
+text-align:center;
+opacity: 0;
+z-index: 1;
+}
+
+.slider button.prev {
+left: 0;
+}
+
+.slider button.next {
+right: 0;
+}
+
+.slider button:hover, .slider button:active {
+opacity: 1.0;
+}
+
+.slider .content {
+z-index: 2;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+/* height: 3em; */
+box-sizing: border-box;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+/* line-height: 3em; */
+padding: .8em;
+/* font-size: 1.5em; */
+}
+
+.content {
+	font-family: 'Abel', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    margin: 0 0 1em 0;
+}
+
+.slider .content a {
+color: inherit;
+}
+
+.wrap p a {
+	padding: 0 8px;
+}
+
+.exhibits {
+	position: relative;
+	top: 12px;
+}
+
+/* /////   end of slider css   //// */
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+@media only screen and (max-width : 480px) {
+   /* Smartphone view: 1 tile */
+   .box {
+      width: 100%;
+      padding-bottom: 100%;
+   }
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view: 2 tiles */
+   .box {
+      width: 50%;
+      padding-bottom: 50%;
+   }
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view: 3 tiles */
+   .box {
+      width: 33.3%;
+      padding-bottom: 33.3%;
+   }
+}
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+   /* Medium desktop: 4 tiles */
+   .box {
+      width: 25%;
+      padding-bottom: 25%;
+   }
+}

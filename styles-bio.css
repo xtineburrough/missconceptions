@@ -1,0 +1,202 @@
+@charset "UTF-8";
+* {
+	padding: 0; margin: 0;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+background-color: orange;
+}
+h1 {
+	font-family: 'Damion', Baskerville, Palatino, Serif;	
+}
+nav {
+	background:#000 url(images/nav-top-for-000bg.png) center top no-repeat fixed;
+	position: fixed;
+	top: 0;
+	padding: 1.25em 0 0 0;
+	height: 115px;
+	width: 100%;
+	/*height: 215px;*/
+	z-index: 4;
+}
+nav ul {padding: 1em .5em .5em 1em;}
+nav li {display: inline;}
+nav li a {
+	font-weight: 700;
+	font-size: 1.25em;
+	color: rgba(250,124,0,1.00); /*orange */
+	text-decoration: none;
+	margin: 0 .4em;
+	font-family: 'Arvo', Sans;
+}
+nav li a:hover {
+	color: deeppink;
+}
+
+
+.handwriting {
+	font-family: 'Damion', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	/*font-family: 'Niconne', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; */
+	color: #e0e0e0;
+}
+.x {
+	text-align: center;
+	padding: 1em;
+	font-size: 4em;
+	color: green;
+	opacity: .8;
+ 	text-shadow: 3px 2px 6px deeppink;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	/*background: rgba(129,153,204, .4) url(images/beneath-the-wire-for-top.png) center top no-repeat scroll; */
+	z-index: 2;
+}
+ .x p {
+  -webkit-transform: rotate(-1deg);
+-moz-transform: rotate(-1deg);
+-o-transform: rotate(-1deg);
+-ms-transform: rotate(-1deg);
+transform: rotate(-1deg);
+display: inline-block;
+	 background-color: rgba(213,211,211,.2);
+}
+
+
+.biography {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	margin: 135px 0 0 0;
+	text-align: center;
+}
+.bio-bg {
+	background-color: rgba(244,244,244,.8);
+	padding: 5%;
+	max-width: 45%;
+	float: left;
+	margin: 105px 0 0 0;
+}
+.bio-right-side {
+	background-color: rgba(180,180,180,.75);
+	float: left;
+	width: 35%;
+	padding: 5%;
+	font-family: 'Oswald', sans-serif;
+	color: rgba(37,44,93,1.00);
+	margin: 105px 0 0 0;
+}
+.bio-right-side a:link, a:visited {
+	color: deeppink;
+	padding: 0 6px;
+}
+
+.bio-right-side a:hover, a:active {
+	color: rgba(255,20,147,0.50);
+}
+.wrap {
+   overflow: hidden;
+	width: 100%;
+	width: 100vw;
+	font-family: 'Oswald', sans-serif;
+	text-align: left;
+	font-size: 1em;
+	background-color: rgba(250,124,0,.95); /*orange */
+	color: black;
+	z-index: 4;
+}
+.wrap p {
+	padding: .5em;
+}
+
+.wrap a {
+	font-family: 'Oswald', sans-serif;
+	color: rgba(37,36,36,1.00);
+	margin: 0 -.5em;
+}
+.wrap a:hover {
+	color: rgba(36,70,113,1.00);
+}
+
+h2 {
+	/*background-color: rgba(36,70,113,1.00);*/
+	/*padding: .75em;*/
+	font-size: 1.2em;
+	font-family: 'Arvo', serif;
+	font-weight: 600;
+	color: deeppink;
+	text-align: left;
+	margin: 0;
+}
+
+h2 {
+	background-color: rgba(36,70,113,1.00);
+	padding: .75em;
+	font-size: .85em;
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	color: deeppink;
+	text-align: center;
+	margin: 0;
+}
+.clear {
+	clear: both;
+}
+
+
+/* /// start styles for exhibition page & slider /// */
+
+#container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	min-height: 600px;
+}
+
+
+
+/* /////   end of slider css   //// */
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+@media only screen and (max-width : 480px) {
+   /* Smartphone view: 1 tile */
+   .box {
+      width: 100%;
+      padding-bottom: 100%;
+   }
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view: 2 tiles */
+   .box {
+      width: 50%;
+      padding-bottom: 50%;
+   }
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view: 3 tiles */
+   .box {
+      width: 33.3%;
+      padding-bottom: 33.3%;
+   }
+}
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+   /* Medium desktop: 4 tiles */
+   .box {
+      width: 25%;
+      padding-bottom: 25%;
+   }
+}

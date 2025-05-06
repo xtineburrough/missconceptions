@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+.galleria{ width: 700px; height: 400px; background: #000 }
+.front-text {
+	width: 30%; 
+	background: rgba(228,222,222,.85); 
+	position: absolute; 
+	top: 55%; 
+	right: 10%; 
+	padding: 1em;
+	height: 600px;
+	z-index: 10001;
+	display:block;
+	overflow: scroll;
+	}
+	.close {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		background-color: #CCC;
+	}
+	.close a:link, a:visited, a:hover, a:active {
+		text-decoration: none;
+		background-color: #000;
+	}
+.proposal {
+	color: #D7A700;
+	font-style:italic;
+	background: #000;
+}
+a {
+	color: #D7A700;
+	text-decoration: none;
+	background: #000;
+}
+a:hover {
+	border-bottom-style:solid;
+	border-bottom-width:thin;
+	border-bottom-color: #D7A700;
+}
+h1 {
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:18px;
+}

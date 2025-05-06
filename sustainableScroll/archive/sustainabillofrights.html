@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>everything gets eaten (Taper #3)</title>
+
+<!-- "everything gets eaten", Copyright (C) 2019 Eirian Friedkin
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from the third issue of Taper: Triptychs and Triads, Spring 2019:
+
+https://taper.badquart.to/3/everything_gets_eaten.html
+
+"everything gets eaten" by Eirian Friedkin is a reflection on the
+feeling of futility, apathy, and decay.
+
+A triptych is a piece of work in three parts where the middle section
+is the most important. On of the shortest constructions for sentences
+in the English language to express connections requires the triad of
+components: a subject, a verb, and an object. When considering the
+entanglements in the world it becomes obvious that the subject of one
+concept or concern can be(come) the objects of others.
+
+The verb "to eat" refers foremost to taking in food through the mouth,
+but the verb can also refer to any (gradual) form of consumption or
+destruction. When looking at the world one might feel as if everything
+is connected to everything else, but also may play out at the expense
+of everything. A handful of popular nouns where chosen at random and
+are combined as such to allow the viewer to draw (unexpected)
+connections between different concepts and how one may very well
+degrade another. At some point this poem is going to have stated every
+possible connection between every concept chosen. Every connection
+stated is at first one of empowerment since the subject can draw from
+the object. The object in turn (is going to become the subject and)
+will pass on the exploitation. Everything will feed of something and
+is going the be reused. Even if you hold something dear, it can not
+escape this cycle.
+-->
+
+	<style>
+	body { margin:0 ; overflow:hidden }
+	a { color:#eee ; text-decoration:none }
+	header { margin:0 ; padding:0 ; background-color:#444 ; color:#bbb ;
+		position:relative ; z-index:1000 }
+	header > h1 { margin:0 ; font-size:12px ; font-family:sans-serif ;
+		border-bottom:1px #999 solid ; padding:5px 10px ; line-height:17px }
+	</style>
+
+        <!-- additional code to remove line breaks around (labled) div for poem by Eirian Friedkin -->
+	<style>
+	#subj {
+	  display: inline;
+	}
+	#verb {
+	  display: inline;
+	}
+	#object {
+	  display: inline;
+	}
+	#stanza {
+	  margin: 0;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  -ms-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	  font-size: 8vh;
+	}
+	</style>
+
+</head>
+<body>
+<header id=nav>
+	<h1>
+		<a href="index.html">Taper #3 :
+		Triptychs and Triads</a> : Spring 2019 <br>
+		<a href="everything_gets_eaten.html">"everything gets eaten"</a> by
+		<a href="about.html#friedkin">Eirian Friedkin</a> :
+		<a href="juracan.html">&lt;&lt;</a> &mdash;
+		<a href="rules_of_three.html">&gt;&gt;</a> :
+		<a onclick="fullscreenEvt(true);"> Full screen </a>
+	</h1>
+	<script>
+	function fullscreenListeners(f)
+	{
+		f("mozfullscreenchange",fullscreenEvt);
+		f("MSFullscreenChange",fullscreenEvt);
+		f("fullscreenchange",fullscreenEvt);
+		f("webkitfullscreenchange",fullscreenEvt);
+	}
+	function fullscreenEvt(incomingReq)
+	{
+		fullscreenListeners(document.removeEventListener);
+		if(incomingReq===true||document.mozFullScreen||document.fullscreenElement||
+		document.webkitIsFullScreen||document.msFullscreenElement) {
+			var fsElt;
+			if(window.c instanceof HTMLCanvasElement) fsElt = window.c;
+			else fsElt = document.documentElement;
+			if (fsElt.requestFullscreen) fsElt.requestFullscreen();
+			else if (fsElt.msRequestFullscreen) fsElt.msRequestFullscreen();
+			else if (fsElt.mozRequestFullScreen) fsElt.mozRequestFullScreen();
+			else if (fsElt.webkitRequestFullScreen) fsElt.webkitRequestFullScreen();
+			nav.style.display = "none";
+		}
+		else nav.style.display = "block";
+		if (typeof l==="function") setTimeout(l,200);
+		fullscreenListeners(document.addEventListener);
+	}
+	</script>
+</header> <!-- The rest, the poem without the header, is at most 3kb -->
+<script>function update(){var wrds=["We will","Our mission is to","Our goal is to","We are committed to","We are dedicated to","Our services will","Our foundation will","We exist to"]
+var s=document.getElementById("subj");var o=document.getElementById("object");s.innerText=o.innerText;o.innerText=wrds[Math.floor(Math.random()*wrds.length)]}
+var clk=setInterval(update,3000);</script><div id="stanza"><div id="subj">Our company aims to</div> sustain the planet <div id="object">the planet</div></div>
+</body>
+</html>

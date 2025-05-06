@@ -1,0 +1,123 @@
+@charset "UTF-8";
+html {
+	width: 100%;
+	height: 100%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0; /*seems i shouldn't need this since i used the universal selector but trying to eliminate any space at all on the page and am getting a weird one beneath each div */
+	padding: 0;
+	background-color: #ccc;
+}
+
+.wrap {
+	width: 100%;
+	margin: 220px auto;
+    text-align: center;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2em;
+    background: #000;
+    z-index: 1;
+}
+nav li {
+    list-style: none;
+    list-style-type: none;
+}
+nav a {
+    float: left;
+    padding: 0 0 0 3em;
+    color: #ccc;
+    text-transform: capitalize;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+}
+p {
+    color: yellow;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+.statement {
+	width: 45%;
+	max-width: 45%;
+	padding: 0 10% 0 25%;
+	text-align: left;
+	font-size: 1.25em;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+}
+.statement a:link, a:visited {
+	font-size: .85em;
+	color: yellow;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	float: none;
+}
+
+.statement a:hover, a:active {
+	font-size: .85em;
+	color: red;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	float: none;
+}
+.contents {
+    width: 1000px;
+    height: 800px;
+  border: 2px solid #FF0000;
+  z-index: 1;
+}
+
+.clear {
+	clear: both;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 100%;
+  max-width: 100%;
+}
+
+.column img {
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 98%;
+  height: auto;
+	padding-bottom: 2%;
+}
+
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 480px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+}
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+    .column {
+      flex: 33.3%;
+      max-width: 33.3%;
+    }
+}

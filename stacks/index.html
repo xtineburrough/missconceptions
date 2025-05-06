@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Offerings from the Stacks</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="galleria-1.4.2.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="galleria">
+    <img src="images/01.jpg" alt="Offerings from the Stacks" title="Offerings from the Stacks (interactives)">
+    <img src="images/02.jpg" alt="Offerings from the Stacks" title="Offerings from the Stacks (Love Everyone) ">
+   <img src="images/03.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (Installation View) ">
+    <img src="images/04.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (Shelf view) ">
+    <img src="images/05.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (Wind the Clock...) ">
+    <img src="images/06.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (Participant view) ">
+    <img src="images/07.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (Dismiss whatever insults your own soul...) ">
+    <img src="images/08.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (Book shelf view)">
+    <img src="images/09.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (All memory is reimagined)">
+     <img src="images/10.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (...it was a private place with an opening closed to the public...) ">
+      <img src="images/11.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (Expect everything) ">
+               <img src="images/12.jpg" alt="Offerings from the Stacks " title="Offerings from the Stacks (I'd far rather be happy...) ">
+</div>
+<script>
+    Galleria.loadTheme('themes/fullscreen/galleria.fullscreen.min.js');
+	Galleria.run('.galleria', { 
+        extend: function() { 
+            var gallery = this; // "this" is the gallery instance 
+this.addIdleState( this.get('image-nav-left'), { opacity: 1 }); 
+this.addIdleState( this.get('image-nav-right'), { opacity: 1 }); 
+        } 
+    }); 
+</script>
+
+<div class="front-text">
+	<a href="#" onclick="this.parentNode.style.display = 'none'" class="close">X</a>
+
+<h1>Offerings from the Stacks</h1> <em>Offerings from the Stacks</em> is an installation in Ceremonial Techne, a 2021-2022 exhibit at the Mamdouha Bobst Gallery, located in Bobst Library at NYU. This work of participatory art was made in collaboration with the collection librarians at Bobst. The "handbooks" showcase the hands and interests of the collection librarians who keep NYU Bobst Library organized and searchable. Librarians traced their hands and uploaded them in a Google form where they shared their favorite quote from a book in the library, and the book's call number. This information was translated into a series of handbooks exhibited on an artful shelf in the gallery, inspiring visitors and readers to engage the collection and leave their own favorite quote in the handbook of blank pages.
+	</div>
+</body>
+</html>

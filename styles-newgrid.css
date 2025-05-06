@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	padding: 0; margin: 0;
+	box-sizing: border-box; 
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+background: url(images/walk-on-wire-x.jpg) center top repeat-y scroll;
+	/*background: url(images/background-body.gif) center top repeat-y scroll; */
+	background-size: cover;
+}
+.active-x {
+	background:  url(images/background-header.gif) center top no-repeat fixed;
+	background-size: cover;
+}
+.clear {
+	clear: both;
+}
+nav {
+	background:#000 url(images/nav-top-for-000bg.png) center top no-repeat fixed;
+	position: fixed;
+	top: 0;
+	padding: 1.25em 0 0 0;
+	height: 115px;
+	width: 100%;
+	/*height: 215px;*/
+	z-index: 4;
+}
+nav ul {padding: 1em .5em .5em 1em;}
+nav li {display: inline;}
+nav li a {
+	font-weight: 700;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 1.25em;
+	color: rgba(250,124,0,1.00); /*orange */
+	text-decoration: none;
+	margin: 0 -2px 0 4px;
+}
+nav li a:hover {
+	color: deeppink;
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 20s slidy infinite; 
+}
+
+.video {
+	padding: 0 0 8px 0;
+	text-align: center;
+	margin: 115px 0 0 0;
+	background-color: #000;
+}
+.instagram {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	background-size: cover;
+	background-color: rgb(0,0,0,.8);
+}
+
+.handwriting {
+	font-family: 'Damion', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	/*font-family: 'Niconne', Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"; */
+	color: #e0e0e0;
+}
+.x {
+	text-align: center;
+	padding: 1em;
+	font-size: 4em;
+	color: green;
+	opacity: .8;
+ 	text-shadow: 3px 2px 6px deeppink;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	/*background: rgba(129,153,204, .4) url(images/beneath-the-wire-for-top.png) center top no-repeat scroll; */
+	z-index: 2;
+}
+ .x p {
+  -webkit-transform: rotate(-1deg);
+-moz-transform: rotate(-1deg);
+-o-transform: rotate(-1deg);
+-ms-transform: rotate(-1deg);
+transform: rotate(-1deg);
+display: inline-block;
+	 background-color: rgba(213,211,211,.2);
+}
+
+.bio-rss {
+	width: 100%;
+	width: 100vw;
+	margin-top: -12px;
+	padding-top: 6px;
+}
+.short-bio {
+	padding: 1% 3% 3% 3%;
+	color:#373636;
+	font-size: 1em;
+	font-family: 'Arvo', sans-serif;
+	float: left;
+	width: 30%;
+	background-color: rgb(150,146,146);
+	overflow: scroll;
+}
+.on-campus {
+	float: left;
+	padding: 1% 3% 3% 3%;
+	width: 40%;
+	background-color: rgba(250,124,0,.95); /*orange */
+	font-size: 1em;
+	font-family: 'Arvo', sans-serif;
+	color: #373636;	
+	overflow: scroll;
+}
+.labsynthe a {
+	color: cornsilk;
+}
+.labsynthe {
+	float: left;
+	padding: 1% 3% 3% 3%;
+	width: 30%;
+	
+	background-color: rgb(50,85,7); /*dark green */
+	font-size: 1em;
+	font-family: 'Arvo', sans-serif;
+	
+	color: #e0e0e0;	
+	overflow: scroll;
+}
+.left {
+	float: left;
+}
+
+.left a{
+	font-size: .75em;
+	display: block;
+	line-height: .75em;
+}
+.rss {
+	text-align: center;
+	width: 51%; 
+	position: absolute;
+	margin: 0 0 0 49%;
+	background-color: #e0e0e0;
+	height: 400px;
+	padding: 0 1em 0 0;
+	z-index: -1;
+}
+
+.projects {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	margin: 12px 0 0 12px;
+}
+.exhibits {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	margin: 3em 0 0 0;
+}
+.biography {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
+	margin: 125px 0 0 0;
+}
+.bio-bg {
+	background-color: #fff;
+	padding: 1em;
+	max-width: 600px;
+	float: left;
+}
+.bio-right-side {
+	background-color: rgba(180,180,180,.9);
+	float: left;
+	min-width: 300px;
+	font-family: 'Oswald', sans-serif;
+	color: rgba(37,44,93,1.00);
+}
+
+.wrap {
+	clear: both;
+	overflow: visible;
+	width: 100%;
+	font-family: 'Oswald', sans-serif;
+	text-align: left;
+	font-size: 1em;
+	background-color: rgba(250,124,0,.95); /*orange */
+	color: black;
+	padding: 1em 0;
+	z-index: 5;
+}
+.wrap p {
+	padding: .25em;
+}
+
+.bio h1 {
+	font-size: 2em;
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+}
+.bio-left {
+	width: 45%;
+	padding: 1em;
+	float: left;
+}
+.bio-right {
+	width: 45%;
+	padding: 1em 1em 1em 0;
+	float: left;
+}
+.bio a {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1em;
+	color: #1B5975;
+	padding: 0;
+}
+.bio a:hover {
+	color: #482E00;
+}
+h2 {
+	background-color: rgba(36,70,113,1.00);
+	padding: .75em;
+	font-size: .85em;
+	font-family: 'Arvo', serif;
+	font-weight: 400;
+	color: deeppink;
+	text-align: center;
+	margin: 0;
+}
+
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { 
+	position: relative; 
+	top: 0; right: 0; width: 100%; 
+	background: rgba(0,0,0,0.5); 
+	color: #fff; 
+	padding-top: 240px; 
+
+}
+
+.vid-info h1 { 
+	font-size: 1em; 
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	line-height: 1.2; 
+}
+
+
+
+.wrap p a {
+	padding: 0 8px;
+}
+
+.exhibits {
+	position: relative;
+	top: 12px;
+}
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.5em;
+  word-break: break-all;
+}
+
+.row {
+  margin: 1em -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  /* background-color: rgba(0,0,0,.50);   delete this  ------- */
+  padding: 1em 0;
+}
+.content a, {
+	font-family: 'Oswald', sans-serif;
+	background-color: #000;
+	color: cornsilk;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .short-bio {
+	width: 100%;
+	padding: 2%;
+}
+.on-campus {
+	width: 100%;
+	padding: 2%;
+}
+.labsynthe {
+	width: 100%;
+	padding: 2%;
+}
+.content {
+	background-color: rgba(160,0,210,.30);
+	padding: 1em 0;
+	width: 100%;
+	text-align: center;
+  }
