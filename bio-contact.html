@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>xtine burrough</title>
+
+    <!-- 
+    Title: Missconceptions.net
+    Author: xtine burrough
+    Date: 2025
+    License: CC BY-NC-SA
+    Paper samples (background images) from transparenttextures.com and pixaby
+    -->
+
+    <!-- Get Bootstrap
+    -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    >
+
+    <!-- Get Google Fonts
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Martian+Mono:wght@100..800&family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    >
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        color: black;
+      }
+      :root {
+        --xtine-gold: rgb(204, 153, 51); /* Define custom colors*/
+        --periwinkle: rgb(184, 194, 209); 
+        --xtine-green: rgb(13, 97, 9);
+        --xtine-darkblue: rgb(31, 75, 118);
+        --xtine-blush: rgb(153, 73, 74);
+      }
+      body {
+        font-family: "Archivo", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        /* make full background animate background: center / cover no-repeat url("images/immortalFiber-bg.gif"), #eee;
+        */
+        background-color: rgb(74, 72, 63);
+        background: center/cover repeat-y url(images/bg/bg-gray-shoe-offset.jpg);
+      }
+     
+
+      /* page elements */
+      h1 {
+        font-family: "Fjalla One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        margin: .65rem 0 -0.5rem 0;
+        padding: 0 0 .25rem 0;
+        transform: rotate(-1.25deg);
+      }
+      header {
+        background-color: var(--xtine-gold);
+        padding: .5rem;
+        margin: -.5rem;
+        transform: rotate(-1.25deg);
+      }
+      /* IMG-FLUID instead of img-fluid on every img element apply these settings to make all images fluid */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .navbar {
+        /*background-color: rgba(196, 171, 45, 0.85)!important;*/
+        background-color: var(--xtine-gold) !important;
+        transform: rotate(-1.25deg);
+         }
+        
+      .portfolio {
+        background-color: antiquewhite;
+        margin: 0.5rem;
+        padding: 1rem;
+      }
+      
+      .art-left {
+        background: -.25rem url(images/coffeering.jpg) antiquewhite repeat;
+        background-blend-mode: overlay;
+      }
+      .art-right {
+        background: 25.25rem 5rem url(images/coffeering.jpg) antiquewhite repeat;
+        background-blend-mode: overlay;
+      }
+      .portfolio img {
+        max-width: 100%;
+        height: auto;
+        border: 0.125rem solid rgb(74, 72, 63);
+        margin: .25rem 0;
+      }
+      .portfolio img:hover {
+        mix-blend-mode:multiply;
+      }
+      .video {
+        background-color: black;
+        margin: 0.25rem;
+        padding: .25rem;
+      }
+      .vid-caption {
+        color: antiquewhite;
+        background-color: var(--periwinkle);
+        color: rgb(54, 52, 43);
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0%, 92% 99%, 0% 100%); /*clipping the lower right edge to make the composition slightly more dynamic */
+      }
+      .down {
+        transform: rotate(2.2deg);
+      }
+      .up {
+        transform: rotate(-1.5deg);
+      }
+      .carousel-caption {
+        background-color: var(--xtine-gold);
+        background-color:rgb(241, 233, 196);
+        color: black;
+        padding: 1.5% 3%;
+        text-align: center;
+        width: 100vw; /* Fill the entire width of the viewport */
+        left: 50%; /* Position the caption at the horizontal center */
+        transform: translateX(-50%); 
+      }
+      .carousel-indicators .active {
+        background-color: var(--xtine-gold);
+      }
+      .lightlink {
+        color: var(--xtine-gold);
+        font-weight: bold;
+      }
+      .lightlink:hover {
+        color: var(--periwinkle);
+      }
+      .darklink {
+        color: var(--xtine-green);
+        font-weight: bold;
+      }
+      .darklink:hover {
+        color: var(--xtine-gold);
+      }
+      .title {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .title:hover {
+       color: var(--xtine-darkblue);
+      }
+
+       /* background images */
+      .navbar, header, footer {
+        background: center/cover repeat-y url(images/bg/goldenrod-hoodie.jpg);
+      }
+      .blueHoodie {
+        background: center/cover repeat-y url(images/bg/blue-hoodie.jpg);
+      }
+      .pinkRaincoat {
+        background: center/cover repeat-y url(images/bg/pink-raincoat.jpg);
+      }
+      .greenHoodie {
+        background: center/cover repeat-y url(images/bg/green-hoodie.jpg);
+      }
+     
+      .books-bg {
+   
+         background-image: url(images/bg/x-line-bg.png);
+         background-image: url(images/bg/bg-books.jpg);
+        
+         background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+      }
+      
+      .kissSocial {
+        background-image: url(images/bg/kissingface-bg-left.png), url(images/bg/kissingface-bg-right.png);
+        background-position: center left, /* this positions the first image */
+                       center right; /* this positions the second image */
+        background-repeat: no-repeat; 
+      }
+      .books-figure {
+        background: url(images/lined-paper.png) antiquewhite repeat;
+      }
+       .books-section {
+        background: center/cover repeat-y url(images/bg/bg-books.jpg);
+      }
+  
+      /*hide books on medium and small viewports */
+      @media only screen and (max-width: 993px) {
+        .books-bg, .kissSocial {
+        background-image: none;
+           }
+              }
+    </style>
+  </head>
+  <body>
+      <!--navigation-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="z-index: 1000;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" style="z-index: 1000;">xtine burrough</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <!--notice active in the class for this portfolio page, change on other pages-->
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Portfolio</a
+                >
+              </li> 
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Exhibits</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="books-articles.html">Books &amp; Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://labs.utdallas.edu/labsynthe/"
+                  >LabSynthE</a>
+              </li>
+              <li>
+                <a class = "nav-link" href="bio-contact.html">Bio &amp; Contact</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Visible Women</a>
+              </li> -->
+            </ul>
+          </div>
+          <span class="fs-6" name="bonus"> --> low res images = faster webpage, contact for press photos
+     <a href="colors.html" target="_blank">deets on my color palette</a>
+          </span>
+        </div>
+      </nav>
+      <!-- end navigation-->
+
+      <!--carousel MAKE FOR BIO AND CONTACT PAGE W IMAGES OF X MAKING OR PRESS PICS-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="6"
+            aria-label="Slide 7"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="7"
+            aria-label="Slide 8"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="8"
+            aria-label="Slide 9"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="9"
+            aria-label="Slide 10"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="10"
+            aria-label="Slide 11"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="11"
+            aria-label="Slide 12"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="12"
+            aria-label="Slide 13"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="13"
+            aria-label="Slide 14"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="14"
+            aria-label="Slide 15"
+          ></button>
+           <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="15"
+            aria-label="Slide 16"
+          ></button>
+           <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="16"
+            aria-label="Slide 17"
+          ></button>
+           <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="17"
+            aria-label="Slide 18"
+          ></button>
+        </div>
+        <!-- There are 18 slides and buttons, if you change the number of images below you need to match the number to the button elements above-->
+        <div class="carousel-inner">
+           <!--1. 2025 Longest Love Letter-->
+          <div class="carousel-item active"> <!-- First one needs active class-->
+            <img
+              src="images/bio/moonandback2025.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Comets Love You to the Moon and Back, Fox News"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Valentine's Day 2025</h5> <p>An interview with Fox 4 News in Dallas, TX about the longest Valentine's Card project she led with LabSynthE at UT Dallas</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--2. 2025 Comets Love You to the Moon and Back at AHT Research Day-->
+         <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/aht-research2025.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Comets Love You to the Moon and Back, Research Symposium"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Valentine's Day 2025</h5> <p>Presenting the longest Valentine's Card project I led with LabSynthE at UT Dallas, AHT Research Symposium</p></h5>
+                </p>
+                </div>
+          </div>
+         
+          <!--3. 2023 Pop-up Locker Exhibit-->
+          <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/lockers2023.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Pop-up locker exhibit 2023"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Pop-up Locker Exhibit 2023</h5> <p>Pop-up Locker Exhibit in the BASS School, presented by LabSynthE with an Honors Reading/Making Class at UT Dallas</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--4. 2024 The Other Art Fair      NEEDS SECONDARY PAGE LINK IN EXHIBITIONS -->
+          <div class="carousel-item">
+            <img
+              src="images/bio/ibelieveinthesun2024.jpg"
+              class="d-block w-100 img-fluid"
+              alt="LabSynthE for Holocaust Remembrance Day"
+            >
+             <div class="carousel-caption d-none d-md-block">
+              <h5>2024 AR Print/Self-Portrait from the 2024 Solar Eclipse</h5>
+              <p>&ldquo;I believe in the Sun&rdquo; Created for LabSynthE&apos;s contribution to Holocaust Remembrance Day</p>
+                </div>
+          </div>
+            <!--5. 2021 Pop-up Locker Exhibit-->
+          <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/jendeleon-drawing2023.png"
+              class="d-block w-100 img-fluid"
+              alt="Drawing by Jen DeLeon"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2023 Drawing by Jen DeLeon</h5> <p>Drawn as one of many portraits Jen made for her Creativity as Social Practice class final project</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--6. 2021 Pop-up Locker Exhibit-->
+          <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/lockers2022.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Pop-up locker exhibit 2022"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Pop-up Locker Exhibit 2022</h5> <p>Pop-up Locker Exhibit in the BASS School, presented by LabSynthE with an Honors Reading/Making Class at UT Dallas</p></h5>
+                </p>
+                </div>
+          </div>
+        
+        <!--7. 2021 Pop-up Locker Exhibit-->
+          <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/nyu2021.jpg"
+              class="d-block w-100 img-fluid"
+              alt="NYU Ceremonial Techne Exhibit 2021"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Ceremonial Techne Exhibit 2021</h5> <p>In NYU&apos;s Mamdouha Bobst Atrium Gallery</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--8. 2022 women's work is screen saved-->
+          <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/headshots.jpg"
+              class="d-block w-100 img-fluid"
+              alt="digital headshots"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2020s Headshots</h5> <p>Polaroids and transfer prints</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--9. 2015 Walk on Wire-->
+           <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/walkonwire2015.jpg"
+              class="d-block w-100 img-fluid"
+              alt="walk on wire app"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2015 Walk On Wire App</h5> <p>Performing how to walk on wire with an app that transposes the ground beneath your feet and a thin wire. Inspired by Philippe Petit</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--10. 2015 Holding a new book-->
+           <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/routledgecompanion2015.jpg"
+              class="d-block w-100 img-fluid"
+              alt="holding the Routledge Companion to Remix Studies"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2015 New Book!</h5> <p>...holding the <em>Routledge Companion to Remix Studies</em> (first edition!)</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--11. 2011 online lecture for terminal-->
+           <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/2011-terminal-lecture.jpg"
+              class="d-block w-100 img-fluid"
+              alt="2011 coming from the internet"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2011 Terminal Artist Talk</h5> <p>What on earth am I wearing? In this 2011 <a href = "https://www.youtube.com/watch?v=kzXpuaTU9H0" target="_blank">artist talk,</a> I was coming all the way <em>from the internet</em>...it was 2011, online talks weren't as popular back then.</p></h5>
+                </p>
+                </div>
+          </div>
+           <!-- 12. mechanical games -->
+           <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/mechgames-screen.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Mechanical Games 2010"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2010 Mechanical Games at Cornerhouse</h5> <p>Artist talk about the Mechanical Games for Abandon Normal Devices at Cornerhouse, Manchester, UK</p></h5>
+                </p>
+                </div>
+          </div>
+           <!-- 13. mechanical games -->
+           <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/mechgames-medal.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Mechanical Games 2010"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2010 Mechanical Games at Cornerhouse</h5> <p>Delivering First Place Medals to Mechanical Games winners during Abandon Normal Devices at Cornerhouse, Manchester, UK</p></h5>
+                </p>
+                </div>
+          </div>
+          <!-- 14. mechanical games at igniteLA -->
+           <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/igniteLA.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Mechanical Games 2010"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2010 Mechanical Olympics Presentation at Ignite LA</h5> <p>Delivering a petcha kucha presentation for <a href = "https://www.youtube.com/watch?v=JkQxyOJoeM0&t=11s" target="_blank">Ignite Los Angeles</a> about Mechanical Olympics and forthcoming Mechanical Games project for Abandon Normal Devices at Cornerhouse, Manchester, UK</p></h5>
+                </p>
+                </div>
+          </div>
+          <!-- 15. electrofringe -->
+           <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/electrofringe2008.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Electrofringe panel 2008"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2008 Electrofringe</h5> <p>On a panel at Electrofringe in Newcastle, Australia</p></h5>
+                </p>
+                </div>
+          </div>
+            <!--16. delocator-->
+           <div class="carousel-item">
+            <img
+              src="images/bio/ocweekly2007.jpg"
+              class="d-block w-100 img-fluid"
+              alt="OC weekly portrait 2006"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2006 OC Weekly</h5> <p>Portrait to accompany Gustavo Arellano&apos;s (appears online as &rdquo;staff&ldquo;) <a href="https://www.ocweekly.com/star-bucker-6398288/" target="_blank">article</a></p></h5>
+                </p>
+                </div>
+          </div>
+           <!--17. paradise obscura-->
+           <div class="carousel-item">
+            <img
+              src="images/bio/paradise-obscura-soManyBags.jpg"
+              class="d-block w-100 img-fluid"
+              alt="hand making paper bags 2006"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2006 Paradise Obscura at City Lights Bookstore</h5> <p>Self-portrait after making fifty letter-press printed and glued paper bags to give away at City Lights Books in San Francisco, CA in honor of the 50<sup>th</sup>anniversary of Jack Kerouac&apos;s <em>On The Road</em>.</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--18. baby-->
+           <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/bio/baby.jpg"
+              class="d-block w-100 img-fluid"
+              alt="1974"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>1974</h5> <p>I turned out lanky, but I was a pudgy baby</p></h5>
+                </p>
+                </div>
+          </div>
+
+        </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+ 
+<!--           Bio-->
+  <div class="container wrapper topmarg">
+      <!--wrapper-->
+      <div class="row justify-content-center">
+        <div class="col-sm-8 text-center books-figure toppad" name="bio">
+          <h1>BIO</h1>
+          <span class="text-start fs-6">
+            <p class="px-4 pt-4 writing">
+              xtine burrough is a media artist and educator based in Dallas, Texas. Her work spans solo and group exhibitions in galleries and institutions, exploring the intersection of design, intervention, and digital poetry. Through remix practices—appropriation, juxtaposition, and computation—burrough creates screensavers, videos, internet art, apps, Instagram series, social media interventions, and fine art prints on paper, fabric, and copper.
+              </p>
+              <p class="px-4 writing indent">
+              Her creative practice is documented through reflective writing and publications aimed at students and the evolving field of digital art. Her work is held in libraries, archives, and the Getty Research Institute.
+</p>
+<p class="px-4 writing indent">
+xtine is a professor at the University of Texas at Dallas, where she directs LabSynthE, a laboratory for synthetic and electronic poetry. She holds an MFA from Vermont College of Fine Arts.
+</p>
+<p class="px-4 writing indent">
+Recent publications include Art as Social Practice: Technologies for Change and the second edition of The Routledge Companion to Remix Studies. She is currently writing Critical Web Design, forthcoming from MIT Press in 2026.
+</p>
+              </span>
+            
+           <h1>CONTACT</h1>
+            <p class="py-2">
+              xtineburrough [at] gmail [dot] com
+            <br>
+            <a href = "https://www.instagram.com/xtineburrough/" target="new">@xtineburrough</a> on Instagram</p>
+          </div>
+        </div>
+</div>
+      <!-- add footer here -->
+       <div class="container-fluid" style="background-color: var(--xtine-gold);"> 
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3"> 
+          <div class="col-md-4 d-flex align-items-center"> 
+              <span class="mb-3 mb-md-0 fs-6">Updated 2025 CC-BY-NC xtine burrough</span> 
+            </div> 
+      </footer> </div> 
+    <!-- Get Bootstrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+      integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

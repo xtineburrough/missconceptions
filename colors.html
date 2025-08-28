@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>xtine burrough</title>
+
+    <!-- 
+    Title: Missconceptions.net
+    Author: xtine burrough
+    Date: 2025
+    License: CC BY-NC-SA
+    Paper samples (background images) from transparenttextures.com and pixaby
+    -->
+
+    <!-- Get Bootstrap
+    -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    >
+
+    <!-- Get Google Fonts
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Martian+Mono:wght@100..800&family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    >
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        color: black;
+      }
+       :root {
+        --xtine-gold: rgb(204, 153, 51); /* Define custom colors*/
+        --periwinkle: rgb(184, 194, 209); 
+        --xtine-green: rgb(13, 97, 9);
+        --xtine-darkblue: rgb(31, 75, 118);
+        --xtine-blush: rgb(153, 73, 74);
+      }
+      body {
+        font-family: "Archivo", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        /* make full background animate background: center / cover no-repeat url("images/immortalFiber-bg.gif"), #eee;
+        */
+        background-color: rgb(74, 72, 63);
+        background: center/cover repeat-y url(images/bg/bg-gray-shoe-offset.jpg);
+      }
+     
+
+      /* page elements */
+      h1 {
+        font-family: "Fjalla One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        margin: .65rem 0 -0.5rem 0;
+        padding: 0 0 .25rem 0;
+        transform: rotate(-1.25deg);
+      }
+      header {
+        background-color: var(--xtine-gold);
+        padding: .5rem;
+        margin: -.5rem;
+        transform: rotate(-1.25deg);
+      }
+      /* IMG-FLUID instead of img-fluid on every img element apply these settings to make all images fluid */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .navbar {
+        /*background-color: rgba(196, 171, 45, 0.85)!important;*/
+        background-color: var(--xtine-gold) !important;
+        transform: rotate(-1.25deg);
+         }
+        
+      .portfolio {
+        background-color: antiquewhite;
+        margin: 0.5rem;
+        padding: 1rem;
+      }
+      
+      .art-left {
+        background: -.25rem url(images/coffeering.jpg) antiquewhite repeat;
+        background-blend-mode: overlay;
+      }
+      .art-right {
+        background: 25.25rem 5rem url(images/coffeering.jpg) antiquewhite repeat;
+        background-blend-mode: overlay;
+      }
+      .portfolio img {
+        max-width: 100%;
+        height: auto;
+        border: 0.125rem solid rgb(74, 72, 63);
+        margin: .25rem 0;
+      }
+      .portfolio img:hover {
+        mix-blend-mode:multiply;
+      }
+      .video {
+        background-color: black;
+        margin: 0.25rem;
+        padding: .25rem;
+      }
+      .vid-caption {
+        color: antiquewhite;
+        background-color: var(--periwinkle);
+        color: rgb(54, 52, 43);
+        padding: 1rem 2rem;
+        clip-path: polygon(0 0, 100% 0%, 92% 99%, 0% 100%); /*clipping the lower right edge to make the composition slightly more dynamic */
+      }
+      .down {
+        transform: rotate(2.2deg);
+      }
+      .up {
+        transform: rotate(-1.5deg);
+      }
+      .carousel-caption {
+        background-color: var(--xtine-gold);
+        background-color:rgb(241, 233, 196);
+        color: black;
+        padding: 1.5% 3%;
+        text-align: center;
+        width: 100vw; /* Fill the entire width of the viewport */
+        left: 50%; /* Position the caption at the horizontal center */
+        transform: translateX(-50%); 
+      }
+      .carousel-indicators .active {
+        background-color: var(--xtine-gold);
+      }
+      .lightlink {
+        color: var(--xtine-gold);
+        font-weight: bold;
+      }
+      .lightlink:hover {
+        color: var(--periwinkle);
+      }
+      .darklink {
+        color: var(--xtine-green);
+        font-weight: bold;
+      }
+      .darklink:hover {
+        color: var(--xtine-gold);
+      }
+      .title {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .title:hover {
+       color: var(--xtine-darkblue);
+      }
+
+       /* background images */
+      .navbar, header, footer {
+        background: center/cover repeat-y url(images/bg/goldenrod-hoodie.jpg);
+      }
+      .blueHoodie {
+        background: center/cover repeat-y url(images/bg/blue-hoodie.jpg);
+      }
+      .pinkRaincoat {
+        background: center/cover repeat-y url(images/bg/pink-raincoat.jpg);
+      }
+      .greenHoodie {
+        background: center/cover repeat-y url(images/bg/green-hoodie.jpg);
+      }
+     
+      .books-bg {
+   
+         background-image: url(images/bg/x-line-bg.png);
+         background-image: url(images/bg/bg-books.jpg);
+        
+         background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+      }
+      
+      .kissSocial {
+        background-image: url(images/bg/kissingface-bg-left.png), url(images/bg/kissingface-bg-right.png);
+        background-position: center left, /* this positions the first image */
+                       center right; /* this positions the second image */
+        background-repeat: no-repeat; 
+      }
+      .books-figure {
+        background: url(images/lined-paper.png) antiquewhite repeat;
+      }
+       .books-section {
+        background: center/cover repeat-y url(images/bg/bg-books.jpg);
+      }
+  
+      /*hide books on medium and small viewports */
+      @media only screen and (max-width: 993px) {
+        .books-bg, .kissSocial {
+        background-image: none;
+           }
+              }
+    </style>
+  </head>
+  <body>
+      <!--navigation-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="z-index: 1000;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" style="z-index: 1000;">xtine burrough</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <!--notice active in the class for this portfolio page, change on other pages-->
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Portfolio</a
+                >
+              </li> 
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Exhibits</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="books-articles.html">Books &amp; Articles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://labs.utdallas.edu/labsynthe/"
+                  >LabSynthE</a>
+              </li>
+              <li>
+                <a class = "nav-link" href="bio-contact.html">Bio &amp; Contact</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Visible Women</a>
+              </li> -->
+            </ul>
+          </div>
+          <span class="fs-6" name="bonus"> --> low res images = faster webpage, contact for press photos
+     <a href="colors.html" target="_blank">deets on my color palette</a>
+          </span>
+        </div>
+      </nav>
+      <!-- end navigation-->
+
+      <!--carousel MAKE FOR BIO AND CONTACT PAGE W IMAGES OF X MAKING OR PRESS PICS-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <!-- There are 4 slides and buttons, if you change the number of images below you need to match the number to the button elements above-->
+        <div class="carousel-inner">
+           <!--1. Blush raincoat-->
+          <div class="carousel-item active"> <!-- First one needs active class-->
+            <img
+              src="images/colors/x-blush.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Comets Love You to the Moon and Back, Fox News"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>xtine blush</h5> <p>The rain season is real. I wear this rain coat a lot in spring.</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--2. Goldenrod hoodie-->
+         <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/colors/x-gold.jpg"
+              class="d-block w-100 img-fluid"
+              alt="Goldenrod hoodie"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>xtine goldenrod</h5> <p>This is one of my favorite hoodies. I wear it so much students have called this color &ldquo;xtine yellow.&rdquo;</p></h5>
+                </p>
+                </div>
+          </div>
+         
+          <!--3. Green hoodie-->
+          <div class="carousel-item"> <!-- First one needs active class-->
+            <img
+              src="images/colors/x-green.jpg"
+              class="d-block w-100 img-fluid"
+              alt="green hoodie"
+            >
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>xtine green</h5> <p>This one is knit, so it seems like a sweater instead of athletic wear. I&apos;ve been wearing this since 2006.</p></h5>
+                </p>
+                </div>
+          </div>
+          <!--4. xtine dark blue -->
+          <div class="carousel-item">
+            <img
+              src="images/colors/x-darkblue.jpg"
+              class="d-block w-100 img-fluid"
+              alt="blue Aviator hoodie"
+            >
+             <div class="carousel-caption d-none d-md-block">
+              <h5>xtine dark blue</h5>
+              <p>Another hoodie. At least I&apos;m consistent?</p>
+                </div>
+          </div>
+        
+        </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+ 
+<!--           Colors-->
+  <div class="container wrapper topmarg">
+      <!--wrapper-->
+      <div class="row justify-content-center">
+        <div class="col-sm-8 text-center books-figure toppad" name="bio">
+          <h1>All My Favorite Colors</h1>
+          <span class="text-start fs-6">
+            <p class="px-4 pt-4 writing">
+            It&apos; hard to know if I made my first designs with these colors intentionally or subconsciously. I wear these clothes so frequently, I think the colors are a case of &ldquo;the more you see, the more you know (the more it seeps into your subconscious)&rdquo;.  
+            </p>
+              <p class="px-4 writing indent">
+             These colors are referred to by name throughout my code becasue of their inclusion in the CSS root element as named variables (see more about <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties" target="_blank">custom properties</a>). 
+</p>
+<p class="px-4 writing indent">
+</p>
+              </span>
+</div>
+</div>
+</div>
+      <!-- add footer here -->
+       <div class="container-fluid" style="background-color: var(--xtine-gold);"> 
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3"> 
+          <div class="col-md-4 d-flex align-items-center"> 
+              <span class="mb-3 mb-md-0 fs-6">Updated 2025 CC-BY-NC xtine burrough</span> 
+            </div> 
+      </footer> </div> 
+    <!-- Get Bootstrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+      integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

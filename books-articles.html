@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>xtine burrough</title>
+
+    <!-- 
+    Title: Missconceptions.net
+    Author: xtine burrough
+    Date: 2025
+    License: CC BY-NC-SA
+    Paper samples (background images) from transparenttextures.com and pixaby
+    -->
+
+    <!-- Get Bootstrap
+    -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+
+    <!-- Get Google Fonts
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Fjalla+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Martian+Mono:wght@100..800&family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        color: black;
+      }
+       :root {
+        --xtine-gold: rgb(204, 153, 51); /* Define custom colors*/
+        --periwinkle: rgb(184, 194, 209); 
+        --xtine-green: rgb(13, 97, 9);
+        --xtine-darkblue: rgb(31, 75, 118);
+        --xtine-blush: rgb(153, 73, 74);
+      }
+      body {
+        font-family: "Archivo", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        /* background: repeat url(images/lined-paper.png);  */ /*lined paper background from books-figure class */
+        background-color: var(--xtine-darkblue);
+        /* background-blend-mode: screen; */
+      }
+
+      /* page elements */
+      .wrapper {
+        background: repeat url(images/lined-paper.png); /* lined paper background from books-figure class */
+        background-color: var(--periwinkle);
+        background-blend-mode: screen;
+      }
+      .topmarg {
+        margin-top: -3.5rem;
+      }
+      .toppad {
+        padding-top: 5.5rem;
+      }
+      .writing {
+        font-family: "Arvo", serif;
+        font-style: normal;
+        color: rgb(62, 62, 62);
+        line-height: 2.5rem !important;
+      }
+      .indent {
+        text-indent: 2rem;
+      }
+      h1 {
+        font-family: "Fjalla One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        margin: 0.65rem 0 -0.5rem 0;
+        padding: 0 0 0.25rem 0;
+        transform: rotate(-1.25deg);
+      }
+      header {
+        background-color: var(--xtine-gold);
+        padding: 0.5rem;
+        margin: -0.5rem;
+        transform: rotate(-1.25deg);
+      }
+      /* IMG-FLUID instead of img-fluid on every img element apply these settings to make all images fluid */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .navbar {
+        /*background-color: rgba(196, 171, 45, 0.85)!important;*/
+        background-color: var(--xtine-gold) !important;
+        transform: rotate(-1.25deg);
+      }
+      .portfolio {
+        background-color: antiquewhite;
+        margin: 0.5rem;
+        padding: 1rem;
+      }
+
+      .art-left {
+        background: -0.25rem url(images/coffeering.jpg) antiquewhite repeat;
+        background-blend-mode: overlay;
+      }
+      .art-right {
+        background: 25.25rem 5rem url(images/coffeering.jpg) antiquewhite repeat;
+        background-blend-mode: overlay;
+      }
+      .portfolio img {
+        max-width: 100%;
+        height: auto;
+        border: 0.125rem solid rgb(74, 72, 63);
+        margin: 0.25rem 0;
+      }
+      .portfolio img:hover {
+        mix-blend-mode: multiply;
+      }
+      .video {
+        background-color: black;
+        margin: 0.25rem;
+        padding: 0.25rem;
+      }
+      .vid-caption {
+        color: antiquewhite;
+        background-color: var(--periwinkle);
+        color: rgb(54, 52, 43);
+        padding: 1rem 2rem;
+        clip-path: polygon(
+          0 0,
+          100% 0%,
+          92% 99%,
+          0% 100%
+        ); /*clipping the lower right edge to make the composition slightly more dynamic */
+      }
+      .down {
+        transform: rotate(2.2deg);
+      }
+      .up {
+        transform: rotate(-1.5deg);
+      }
+      .carousel-caption {
+        background-color: var(--xtine-gold);
+        background-color: rgb(241, 233, 196);
+        color: black;
+        padding: 1.5% 3%;
+        text-align: center;
+        width: 100vw; /* Fill the entire width of the viewport */
+        left: 50%; /* Position the caption at the horizontal center */
+        transform: translateX(-50%);
+      }
+      .carousel-indicators .active {
+        background-color: var(--xtine-gold);
+      }
+      .lightlink {
+        color: var(--xtine-gold);
+        font-weight: bold;
+      }
+      .lightlink:hover {
+        color: var(--periwinkle);
+      }
+      a {
+        color: var(--xtine-green);
+        font-weight: bold;
+      }
+      a:hover {
+        color: var(--xtine-gold);
+      }
+      .title {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .title:hover {
+        color: var(--xtine-darkblue);
+      }
+
+      /* background images */
+      .navbar,
+      header,
+      footer {
+        background: center/cover repeat-y url(images/bg/goldenrod-hoodie.jpg);
+      }
+      .blueHoodie {
+        background: center/cover repeat-y url(images/bg/blue-hoodie.jpg);
+      }
+      .pinkRaincoat {
+        background: center/cover repeat-y url(images/bg/pink-raincoat.jpg);
+      }
+      .greenHoodie {
+        background: center/cover repeat-y url(images/bg/green-hoodie.jpg);
+      }
+
+      .books-bg {
+        /* background-image: linear-gradient(to right, rgb(246, 240, 171), rgb(176, 173, 77)); */
+        /*background-size: 100% .1rem; Set the line's thickness to 2 pixels */
+        background-image: url(images/bg/x-line-bg.png);
+        background-image: url(images/bg/bg-books.jpg);
+
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        /* background: center / contain no-repeat url(images/bg/x-line-bg.png); */
+      }
+      /* .lineSocial {
+        background: center / contain no-repeat url(images/bg/x-lineSocial-bg.png);
+      } */
+      .kissSocial {
+        background-image: url(images/bg/kissingface-bg-left.png),
+          url(images/bg/kissingface-bg-right.png);
+        background-position: center left,
+          /* this positions the first image */ center right; /* this positions the second image */
+        background-repeat: no-repeat;
+      }
+      .books-figure {
+        background: url(images/lined-paper.png) antiquewhite repeat;
+      }
+      .books-section {
+        background: center/cover repeat-y url(images/bg/bg-books.jpg);
+      }
+      /*hide books on medium and small viewports */
+      @media only screen and (max-width: 993px) {
+        .books-bg,
+        .kissSocial {
+          background-image: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--navigation-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">xtine burrough</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <!--notice active in the class for this portfolio page, change on other pages-->
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Books &amp; Articles</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Press</a>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="http://labs.utdallas.edu/labsynthe/"
+                >LabSynthE</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="bio-contact.html">Bio &amp; Contact</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Visible Women</a>
+              </li> -->
+          </ul>
+        </div>
+         <span class="fs-6" name="bonus"> --> low res images = faster webpage, contact for press photos
+     <a href="colors.html" target="_blank">deets on my color palette</a>
+          </span>
+      </div>
+    </nav>
+    <!-- end navigation-->
+
+    <div class="container wrapper topmarg">
+      <!--wrapper-->
+      <div class="row justify-content-center">
+        <div class="col-sm-4 text-center books-figure toppad" name="writing">
+          <h1>ON WRITING</h1>
+          <span class="text-start fs-6">
+            <p class="px-4 pt-4 writing">
+              Writing is integral to my practice. I write to reflect on my
+              process, narrate my work, and share my ideas with others. I write
+              for overlapping audiences with separate
+              hierarchies: Textbooks are for students first, as well as fellow
+              educators and practitioners; whereas journal articles and chapter contributions
+              are for me, and then my peers, and maybe a few very interested
+              students.
+              </p>
+              <p class="px-4 writing indent">
+              I have written books, articles, and chapters about projects at the
+              intersections of digital art, design, the internet and society. My
+              writing is often collaborative, involving co-authors and
+              contributors who bring diverse perspectives and expertise, filling
+              in gaps within my knowledge. I also write as a form of
+              documentation. Most of my projects are digital born and ephemeral
+              (and if they&apos;re physical, I probably don&apos;t care for them
+              as well as I should...so they&apos;re ephemeral, too).</p>
+              <p class="px-4 writing indent">As an activity, writing enables me to
+              think-while-doing about my work when the kids are asleep, when I
+              don&apos;t have access to (or time for) a studio or materials.
+              Writing is a different activity than making art in the studio, it
+              requires something different of me that I am more able to harvest
+              in the &ldquo;odds and ends&rdquo; of time, the kind of time
+              working mothers take between our many roles. As a lasting and
+              sharable object, writing is a way to connect with others, to share
+              my passion for art and technology, and to contribute to the
+              ongoing dialogue about the role of digital art in our networked
+              lives.</p>
+              </span>
+            </p>
+          </span>
+        </div>
+
+        <!--           portfolio 2-across elements-->
+
+        <div class="col text-center" name="books">
+          <div class="my-4 toppad">
+            <h1>TEXTBOOKS</h1>
+            <p>
+              Interactive art, Digital Art as Social Practice, Digital Design
+              Foundations, Remix Studies
+            </p>
+          </div>
+          <div
+            class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 row-cols-xs-1 g-4 mx-2 py-4 text-center justify-content-center align-items-center"
+          >
+            <!-- g-4 is a gutter at 4 units, mx-2 applies .5rem margin to the left and right sides, py .5rem top and bottom, align is vertical justify is horizontal-->
+            <div class="col">
+              <!--i replaced all  class="figure-img img-fluid" from img tags with the custom css in the head .portfolio img -->
+              <figure class="portfolio down">
+                <!--add books-figure to the class for lined paper bg-->
+                <a
+                  href="https://criticalwebdesign.github.io/book/"
+                  target="_blank"
+                >
+                  <img src="images/mitpress.png" alt="Critical Web Design" />
+                </a>
+                <figcaption class="figure-caption fs-6 text-reset py-2">
+                  <!--fs-6 sets text size typography size, py-2 gives padding vertically-->
+                  Coming Soon:
+                  <a
+                    href="https://criticalwebdesign.github.io/book/"
+                    target="_blank"
+                    class="title"
+                    >Critical Web Design</a
+                  >
+                  <p>
+                    xtine burrough &amp; Owen Mundy<br />
+                    MIT Press, 2026
+                  </p>
+                  <!--blurb about the book-->
+                  <p class="text-start">
+                    Critical web design, like critical design, employs a social usefulness to 
+                    challenge the ways technology enters our lives. It reclaims the mechanisms, 
+                    tools, and practices used to produce coercive and commercial interfaces, 
+                    harnessing the power of design and networked information to question 
+                    preconceptions about the medium itself. This engaging, practical textbook 
+                    explores how to design for the web while maintaining a critical understanding 
+                    of the technoculture that sustains it. Motivated by new media art practices and 
+                    speculative design, xtine burrough and Owen Mundy teach readers to conceptualize, 
+                    design, and program responsive websites as both an applied and creative practice. 
+        
+
+                  </p>
+                  <button
+                    class="btn btn-warning"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#moreInfoCWD"
+                    aria-expanded="false"
+                    aria-controls="moreInfo"
+                  >
+                    Read More
+                  </button>
+
+                  <p class="collapse text-start" id="moreInfoCWD">
+                    <br />
+                    Each chapter integrates coverage of the field&apos;s historical and cultural concepts 
+                    with hands-on, technical exercises. The result is a timely, innovative guide that 
+                    makes professional front end development tools accessible to all. 
+                    <br /><br />
+                    
+                  --> Learn-by-doing approach builds technical skills in interface design, usability/accessibility, and coding in HTML/CSS and Javascript
+                
+                    <br />
+                --> Historical, political, and philosophical context relates the “why” argument for learning to code
+                       <br />
+            -->Case studies and interviews with artists and designers bring ideas to life
+<br />
+        -->Extensive supplemental resources include code, exercises, and video demonstrations
+                    
+
+                    <br /><br />The Critical Web Design <a href = "https://criticalwebdesign.github.io/book/" target="_blank">Overview,</a>
+                    <a href = "https://github.com/criticalwebdesign/book" target="_blank">GitHub,</a> 
+                    and 
+                    <a href = "https://github.com/criticalwebdesign/book/wiki" target="_blank">Wiki</a>
+                    are invaluable resources for readers and students.
+                  </p>
+                  <!--close blurb-->
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="portfolio up">
+                <a
+                  href="https://www.routledge.com/Art-as-Social-Practice-Technologies-for-Change/burrough-Walgren/p/book/9780367758462"
+                  target="_blank"
+                >
+                  <img src="images/asp-cover-sm.png" alt="book cover" />
+                </a>
+                <figcaption class="figure-caption fs-6 text-reset lh-sm py-2">
+                  <a
+                    href="https://www.routledge.com/Art-as-Social-Practice-Technologies-for-Change/burrough-Walgren/p/book/9780367758462"
+                    class="title"
+                    target="_blank"
+                  >
+                    Art as Social Practice: Technologies for Change</a
+                  >
+                  <p>
+                    Edited by xtine burrough &amp;Judy Walgren. <br />Routledge,
+                    2022
+                  </p>
+                  <p class="text-start">
+                    This collection of essays and case studies explores the
+                    intersection of art, technology, and social change. Artists
+                    examine and share how they use digital tools and platforms
+                    to engage with communities, address social issues, and
+                    create meaningful impact. With a focus on socially engaged
+                    art practices in the twenty-first century, this book
+                    explores how artists use their creative practices to raise
+                    consciousness, form communities, create change, and bring
+                    forth social impact through new technologies and digital
+                    practices.
+                  </p>
+                  <button
+                    class="btn btn-warning"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#moreInfo"
+                    aria-expanded="false"
+                    aria-controls="moreInfo"
+                  >
+                    Read More
+                  </button>
+
+                  <p class="collapse text-start" id="moreInfo">
+                    <br />
+                    Suzanne Lacy&apos;s Foreword and section introduction
+                    authors Anne Balsamo, Harrell Fletcher, Natalie Loveless,
+                    Karen Moss, and Stephanie Rothenberg present twenty-five
+                    in-depth case studies by established and emerging
+                    contemporary artists including:
+                    <br /><br />Kim Abeles, Christopher Blay, Ceasar &amp; Lois,
+                    Joseph DeLappe, Mary Beth Heffernan, Chris Johnson, Rebekah
+                    Modrak, Praba Pilar, Tabita Rezaire, Sylvain Souklaye, and
+                    collaborators Victoria Vesna and Siddharth Ramakrishnan.
+
+                    <br /><br />&nbsp;Artists offer firsthand insight into how
+                    they activate methods used in socially engaged art projects
+                    from the twentieth century and incorporated new technologies
+                    to create twenty-first century, socially engaged, digital
+                    art practices. Works highlighted in this book span
+                    collaborative image-making, immersive experiences, telematic
+                    art, time machines, artificial intelligence, and physical
+                    computing. These reflective case studies reveal how the
+                    artists collaborate with participants and communities, and
+                    have found ways to expand, transform, reimagine, and create
+                    new platforms for meaningful exchange in both physical and
+                    virtual spaces.
+
+                    <br /><br />&nbsp;An invaluable resource for students and
+                    scholars of art, technology, and new media, as well as
+                    artists interested in exploring these intersections.
+                    <br><br>
+                    <a href = "https://www.routledge.com/Art-as-Social-Practice-Technologies-for-Change/burrough-Walgren/p/book/9780367758462" target="_blank">Buy</a> the book or <a href = "https://www.routledge.com/textbooks/evaluation/9781003169109" target="_blank">request a desk copy</a>.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col">
+              <figure class="portfolio down">
+                <a
+                  href="https://www.routledge.com/The-Routledge-Companion-to-Remix-Studies/Navas-Gallagher-burrough/p/book/9781032509105"
+                  target="_blank"
+                >
+                  <img src="images/remixStudies.png" alt="book cover" />
+                </a>
+                <figcaption class="figure-caption text-reset py-2 fs-6">
+                  <a
+                    href="https://www.routledge.com/The-Routledge-Companion-to-Remix-Studies/Navas-Gallagher-burrough/p/book/9781032509105"
+                    target="_blank"
+                    class="title"
+                    >The Routledge Companion to Remix Studies, 2<sup>nd</sup>
+                    Edition</a
+                  >
+                  <p>
+                    Edited by Eduardo Navas, Owen Gallagher &amp; xtine burrough
+                    <br />Routledge, 2024
+                  </p>
+                  <!--blurb about the book-->
+                  <p class="text-start">The Routledge Companion to Remix Studies, 2nd Edition comprises contemporary texts by key authors and artists who are active in the interdisciplinary field of remix studies.
+
+</p>
+                  <button
+                    class="btn btn-warning"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#moreInfoCompanion"
+                    aria-expanded="false"
+                    aria-controls="moreInfo"
+                  >
+                    Read More
+                  </button>
+
+                  <p class="collapse text-start" id="moreInfoCompanion">
+                    <br />
+                    As an organic international movement, remix culture originated in the popular music culture of the 1970s, and has since grown into a rich cultural activity encompassing numerous forms of media. The act of recombining pre-existing material continues to bring up pressing questions of authenticity, reception, authorship, copyright, and the techno-politics of media activism, especially with the emergence of artificial intelligence, which relies on remix methods and principles for content production. This book approaches remix studies from various angles, including sections on history, aesthetics, ethics, politics, and practice; and offers theoretical chapters alongside case studies of remix projects. This second edition includes ten new chapters, and nine revised chapters. Reprinted chapters from the first edition are updated with editorial prefaces. This volume offers in-depth insight for long-term relevance among the many interdisciplinary fields that rely on and also contribute to remix studies.
+
+                    <br /><br />&nbsp;This companion is a valuable resource for both researchers and remix practitioners, as well as a teaching tool for instructors using remix practices in the classroom.
+
+                    <br><br><a href = "https://www.routledge.com/The-Routledge-Companion-to-Remix-Studies/Navas-Gallagher-burrough/p/book/9781032509105" target="_blank">Buy or preview</a> this book.
+    
+
+                  </p>
+                  <!--close blurb-->
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="portfolio up">
+                <a
+                  href="https://www.peachpit.com/store/foundations-of-digital-art-and-design-with-adobe-creative-9780135732359"
+                  target="_blank"
+                >
+                  <img
+                    src="images/foundations-digitalart.png"
+                    alt="book cover"
+                  />
+                </a>
+                <figcaption class="figure-caption fs-6 text-reset py-2">
+                  <a
+                    href="https://www.peachpit.com/store/foundations-of-digital-art-and-design-with-adobe-creative-9780135732359"
+                    target="_blank"
+                    class="title"
+                  >
+                    Foundations of Digital Art &amp; Design, 2<sup>nd</sup>
+                    Edition</a
+                  >
+                  <p>
+                    xtine burrough<br />
+                    New Riders, AIGA Voices That Matter Series, 2020
+                  </p>
+
+                  <!--blurb about the book-->
+                  <p class="text-start">This book fuses design fundamentals and software training into one cohesive approach.</p>
+                  <button
+                    class="btn btn-warning"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#moreInfoFoundations"
+                    aria-expanded="false"
+                    aria-controls="moreInfo"
+                  >
+                    Read More
+                  </button>
+
+                  <p class="collapse text-start" id="moreInfoFoundations">
+                    <br />
+                    All students of digital design and production–whether learning in a classroom or on their own–need to understand the basic principles of design. These principles are often excluded from books that teach software. Foundations of Digital Art and Design reinvigorates software training by integrating design exercises into tutorials that fuse design fundamentals and core Adobe Creative Cloud skills.
+                    
+
+                    <br /><br />&nbsp;The result is a comprehensive design learning experience organized into five sections that focus on vector art, photography, image manipulation, typography, and effective work habits for digital artists. Design topics and principles include: Bits, Dots, Lines, Shapes, Unity, Rule of Thirds, Zone System, Color Models, Collage, Appropriation, Gestalt, The Bauhaus Basic Course Approach, Continuity, Automation, and Revision.
+
+                    <br /><br />
+                    This book:
+
+<br>-->Teaches art and design principles with references to contemporary digital art alongside digital tools and processes in Adobe Creative Cloud
+<br>-->Addresses the growing trend of compressing design fundamentals and design software into the same course in universities and design colleges
+<br>-->Times each lesson to be used in 50 to 90-minute class sessions with additional practice materials available online
+<br>-->Includes free video screencasts that demonstrate key concepts in every chapter
+<br><br>&nbsp;
+&ldquo;This ambitious book teaches visual thinking and software skills together. The text leads readers step-by-step through the process of creating dynamic images using a range of powerful applications. The engaging, experimental exercises take this project well beyond the typical software guide.&rdquo;
+
+--ELLEN LUPTON, author of <em>Thinking with Type</em> and Director of the Graphic Design MFA program at Maryland Institute College of Art
+<br><br><a href = "http://www.digitalart-design.com/" target="_blank">
+Work files, bonus chapters, screencasts</a>
+<br><br>&nbsp;  
+      <a href = "https://www.peachpit.com/store/foundations-of-digital-art-and-design-with-adobe-creative-9780135732359" target="_blank">Buy</a> the book or <a href = "https://www.pearson.com/en-us/search.html?aq=9780135732359" target="_blank">request a desk copy</a>.         
+</p>
+                  <!--close blurb-->
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="portfolio up">
+                <a
+                  href="https://www.peachpit.com/store/foundations-of-digital-art-and-design-with-adobe-creative-9780135732359"
+                  target="_blank"
+                >
+                  <img src="images/networks.png" alt="book cover" />
+                </a>
+                <figcaption class="figure-caption fs-6 text-reset py-2">
+                  <a
+                    href="https://www.peachpit.com/store/foundations-of-digital-art-and-design-with-adobe-creative-9780135732359"
+                    target="_blank"
+                    class="title"
+                  >
+                    Net Works: Case Studies of Web Art &amp; Design</a
+                  >
+                  <p>Edited by xtine burrough <br />Routledge, 2011</p>
+                  <!--blurb about the book-->
+                  <p class="text-start">
+                    Net Works offers an inside look into the process of successfully developing thoughtful, innovative digital media. In many practice-based art texts and classrooms, technology is divorced from the socio-political concerns of those using it. Although there are many resources for media theorists, practice-based students sometimes find it difficult to engage with a text that fails to relate theoretical concerns to the act of creating. Net Works strives to fill that gap.
+                  </p>
+                  <button
+                    class="btn btn-warning"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#moreInfoNetworks"
+                    aria-expanded="false"
+                    aria-controls="moreInfo"
+                  >
+                    Read More
+                  </button>
+
+                  <p class="collapse text-start" id="moreInfoNetworks">
+                    <br />
+                    Using websites as case studies, each chapter introduces a different style of web project--from formalist play to social activism to data visualization--and then includes the artists' or entrepreneurs' reflections on the particular challenges and outcomes of developing that web project. Scholarly introductions to each section apply a theoretical frame for the projects. A companion website offers further resources for hands-on learning.
+                    <br><br>
+                    Chapters are written by now established contemporary artists including:
+                    <br /><br />&nbsp;Constant Dullaart, Robert Niddefer, Amy Franceschini, Peter Baldes &amp; Marc Horowitz, Brooke Singer, Fernanda Viégas &amp; Martin Wattenberg, Steve Lambert, Beatriz DaCosta, Joseph DeLappe, and more.
+
+                    <br /><br />&nbsp;Combining practical skills for web authoring with critical perspectives on the web, <em>Net Works</em> is ideal for courses in new media design, art, communication, critical studies, media and technology, or popular digital/internet culture.
+
+                    <br /><br />&nbsp;
+                     <a href = "https://www.routledge.com/Net-Works-Case-Studies-in-Web-Art-and-Design/burrough/p/book/9780415882217" target="_blank">Buy</a> the book or <a href = "https://www.routledge.com/textbooks/evaluation/9780203847947" target="_blank">request a desk copy</a>.         
+
+                  </p>
+                  <!--close blurb-->
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="portfolio up">
+                <a
+                  href="https://www.routledge.com/The-Routledge-Handbook-of-Remix-Studies-and-Digital-Humanities/Navas-Gallagher-burrough/p/book/9780367698805"
+                  target="_blank"
+                >
+                  <img src="images/handbook-remix.png" alt="book cover" />
+                </a>
+                <figcaption class="figure-caption fs-6 text-reset py-2">
+                  <a
+                    href="https://www.routledge.com/The-Routledge-Handbook-of-Remix-Studies-and-Digital-Humanities/Navas-Gallagher-burrough/p/book/9780367698805"
+                    target="_blank"
+                    class="title"
+                  >
+                    The Routledge Handbook of Remix Studies and &amp; Design</a
+                  >
+                  <p>
+                    Edited by Eduardo Navas, Owen Gallagher, and xtine
+                    burrough<br />
+                    Routledge, 2020
+                  </p>
+                  <!--blurb about the book-->
+                  <p class="text-start">
+                    In this comprehensive and highly interdisciplinary companion, contributors reflect on remix across the broad spectrum of media and culture, with each chapter offering in-depth reflections on the relationship between remix studies and the digital humanities.
+                  </p>
+                  <button
+                    class="btn btn-warning"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#moreInfoHandbook"
+                    aria-expanded="false"
+                    aria-controls="moreInfo"
+                  >
+                    Read More
+                  </button>
+
+                  <p class="collapse text-start" id="moreInfoHandbook">
+                    <br />
+                    The anthology is organized into sections that explore remix studies and digital humanities in relation to topics such as archives, artificial intelligence, cinema, epistemology, gaming, generative art, hacking, pedagogy, sound, and VR, among other subjects of study. Selected chapters focus on practice-based projects produced by artists, designers, remix studies scholars, and digital humanists. With this mix of practical and theoretical chapters, editors Navas, Gallagher, and burrough offer a tapestry of critical reflection on the contemporary cultural and political implications of remix studies and the digital humanities, functioning as an ideal reference manual to these evolving areas of study across the arts, humanities, and social sciences.
+                    <br /><br />
+This book will be of particular interest to students and scholars of digital humanities, remix studies, media arts, information studies, interactive arts and technology, and digital media studies.
+                    <br /><br />&nbsp;Contributing authors include:
+                    <br /><br />Virginia Kuhn, Karen Keifer-Boyd, Megen de Bruin-Molé, Anne Burdick, Kelley Kreitz, Victoria Bradbury,  Joycelyn Wilson, Alessandro Ludovico, Mark Amerika, Eran Hadas, Lisa Horton and David Beard, Dejan Grba,  David J. Gunkel, Sarah Atkinson, Paul Watkins, and others.  
+
+                    <br /><br />
+                    <a
+                      href="https://www.routledge.com/The-Routledge-Handbook-of-Remix-Studies-and-Digital-Humanities/Navas-Gallagher-burrough/p/book/9780367698805"
+                      target="_blank"
+                      >Preview or Buy</a
+                    > the book on the Routledge website.
+                  </p>
+                  <!--close blurb-->
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col">
+              <figure class="portfolio up">
+                <a
+                  href="https://a.co/d/g35sQIg"
+                  target="_blank"
+                >
+                  <img src="images/digitalFoundations.png" alt="book cover" />
+                </a>
+                <figcaption class="figure-caption fs-6 text-reset py-2">
+                  <a
+                    href="https://a.co/d/g35sQIg"
+                    target="_blank"
+                    class="title"
+                  >
+                    Digital Foundations: Intro to Media Design</a
+                  >
+                  <p>
+                    xtine burrough and Michael Mandiberg<br />New Riders, AIGA
+                    Voices that Matter Series, 2008
+                  </p>
+                  <!--blurb about the book-->
+                  <p class="text-start">Digital Foundations uses formal exercises of the Bauhaus to teach the Adobe Creative Suite. Please note: This book is out of date and the illustrations will not match Adobe Creative Cloud user interface. The Foundations book released in 2020 is more current.</p>
+                  <button
+                    class="btn btn-warning"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#moreInfoDigFoundations"
+                    aria-expanded="false"
+                    aria-controls="moreInfo"
+                  >
+                    Read More
+                  </button>
+
+                  <p class="collapse text-start" id="moreInfoDigFoundations">
+                    <br />
+                    While the text is outdated, the lessons will still teach the fundamentals for people willing to way-find in later versions of Adoboe Creative Cloud. The wiki is free to use and the <a href = "https://archive.flossmanuals.net/digital-foundations/" target="_blank">FLOSS manuals</a> (free documentation on free software) teach the book for open source software (alternatives to Adobe).
+                  
+                  </p>
+                  <!--close blurb-->
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!--close the books ROW -->
+
+          <section id="journals">
+            <div class="row">
+              <div class="col text-center">
+                <header>
+                  <h1>Reflective Practitioner: Journal Articles</h1>
+                  <p>
+                    These chapters and articles are spaces in which I have
+                    narrated and articulated my practice
+                  </p>
+                </header>
+              </div>
+            </div>
+
+            <div
+              class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 row-cols-xs-1 g-4 mx-2 py-4 text-center justify-content-center align-items-center"
+            >
+              <!-- g-4 is a gutter at 4 units, mx-2 applies .5rem margin to the left and right sides, py .5rem top and bottom, align is vertical justify is horizontal-->
+              <div class="col">
+                <!--i replaced all  class="figure-img img-fluid" from img tags with the custom css in the head .portfolio img -->
+                <figure class="portfolio books down">
+                  <a
+                    href="https://iopn.library.illinois.edu/journals/median/article/view/221"
+                    target="_blank"
+                    class="title"
+                  >
+                    <img
+                      src="images/decade-of-working02.jpg"
+                      alt="A decade of working with the working crowd"
+                    />
+                  </a>
+                  <figcaption class="figure-caption fs-6 text-reset py-2">
+                    <!--fs-6 sets text size typography size, py-2 gives padding vertically-->
+                    <a
+                      href="https://iopn.library.illinois.edu/journals/median/article/view/221"
+                      target="_blank"
+                      class="title"
+                      >A Decade of Working with the Working Crowd</a
+                    >, xtine burrough. <em>Media-N 16.1</em> 2020. This article
+                    chronicles ten years of making art with workers on
+                    Amazon.com&apos;s Mechanical Turk. It&apos;s my favorite
+                    piece of writing about my practice to date, appearng in the
+                    special issue, &ldquo;Humans are Underrated: Art and Labor
+                    After Amazon&rdquo; ed. by Johanna Gosse.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="col">
+                <figure class="portfolio books up">
+                  <a
+                    href="https://www.tandfonline.com/doi/full/10.1080/14794713.2021.1927416"
+                    target="_blank"
+                  >
+                    <img
+                      src="images/performingLabSynthE.jpg"
+                      alt="journal cover"
+                    />
+                  </a>
+                  <figcaption class="figure-caption fs-6 text-reset py-2">
+                    <a
+                      href="https://www.tandfonline.com/doi/full/10.1080/14794713.2021.1927416"
+                      target="_blank"
+                      class="title"
+                      >Syntonic Refuge: Performing LabSynthE</a
+                    >, xtine burrough.
+                    <em
+                      >International Journal of Performance Arts and Digital
+                      Media</em
+                    >. Issue 17.2 is affiliated with the 2020 College Art
+                    Association Annual Conference, Panel &ldquo;Flesh and
+                    Circuit: Rethinking Performance and Technology&rdquo;
+                    (Chicago, IL, USA), Guest Editors: Conor McGarrigle and EL
+                    Putnam.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="col">
+                <figure class="portfolio books up">
+                  <a
+                    href="https://unthinking.photography/articles/recovering-lost-narratives-in-epic-kitchens"
+                    target="_blank"
+                    class="title"
+                  >
+                    <img
+                      src="images/epic-handwashing.jpg"
+                      alt="recovering lost narratives unthinking photography"
+                    />
+                  </a>
+                  <figcaption class="figure-caption fs-6 text-reset lh-sm py-2">
+                    <a
+                      href="https://unthinking.photography/articles/recovering-lost-narratives-in-epic-kitchens"
+                      target="_blank"
+                      class="title"
+                      >Recovering Lost Narratives in Epic Kitchens</a
+                    >. xtine burrough &amp; Sabrina Starnaman.
+                    <em>Unthinking Photography</em>, 2020. This article reflects
+                    on projects commissioned for The Photographers&apos; Gallery
+                    Media Wall and online viewers as part of the Data / Set /
+                    Match programme. Blurring the lines between art and archive,
+                    or information and dataset, these projects argue for the
+                    digital dataset as an authority of knowledge curation.
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="col">
+                <figure class="portfolio books down">
+                  <a
+                    href="http://tracejournal.net/trace-issues/issue3/03-burrough.html"
+                    target="_blank"
+                  >
+                    <img src="images/trace.jpg" alt="Trace journal" />
+                  </a>
+                  <figcaption class="figure-caption text-reset py-2 fs-6">
+                    <a
+                      href="http://tracejournal.net/trace-issues/issue3/03-burrough.html"
+                      target="_blank"
+                      class="title"
+                      >Contested Spaces: How We Made An Audio Quilt of One
+                      Thousand Names</a
+                    >
+                    <em>Trace Journal of Writing, Media &amp; Ecology</em> xtine
+                    burrough &amp; Leticia Ferreira, 2019. In this reflective
+                    essay, we narrate how our young and growing
+                    incubator/laboratory created a work of art for
+                    taken-for-granted interior architecture.
+                  </figcaption>
+                </figure>
+              </div>
+
+            </div>
+            <!--close the journal articles ROW -->
+          </section>
+        </div>
+      </div>
+    </div>
+    <!--close all books page wrapper section-->
+    <!-- add footer here -->
+    <div class="container-fluid" style="background-color: var(--xtine-gold)">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center pt-3"
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 fs-6"
+            >Updated 2025 CC-BY-NC xtine burrough</span
+          >
+        </div>
+      </footer>
+    </div>
+    <!-- Get Bootstrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+      integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
