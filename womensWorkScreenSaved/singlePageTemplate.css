@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Body */
 body {
-	font-family: source-sans-pro;
+	font-family: Helvetica, Arial, sans-serif;
 	background-color: #f2f2f2;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -62,6 +62,8 @@ ul li a {
 ul li:hover a {
 	color: #2C9AB7;
 }
+
+/* Hero Section */
 .hero_header {
 	color: #FFFFFF;
 	text-align: center;
@@ -71,11 +73,15 @@ ul li:hover a {
 	margin-left: 0px;
 	letter-spacing: 4px;
 }
-/* Hero Section */
 .hero {
 	background-color: #000;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+img {
+  max-width: 100%; /* Ensures the image never exceeds the width of its container */
+  height: auto;    /* Automatically adjusts the height to maintain the aspect ratio */
+  display: block;  /* Helps with centering and layout in some contexts */
 }
 .light {
 	font-weight: bold;
@@ -85,6 +91,7 @@ ul li:hover a {
 	text-align: center;
 	color: #FFFFFF;
 	margin-top: 4px;
+	padding: 1rem;
 	font-weight: lighter;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -255,7 +262,7 @@ footer {
 .hidden {
 	display: none;
 }
-
+/* used to have a mail list */ 
 .maillist {
 	text-align: center;
 	padding: 1em;
